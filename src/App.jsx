@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
 
+  // Stati per gestire i campi del form
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -11,6 +12,7 @@ function App() {
   const [bio, setBio] = useState('');
   const [error, setError] = useState('');
 
+  // Funzione per gestire l'invio del form
   const submitForm = (e) => {
     e.preventDefault();
 
@@ -40,6 +42,7 @@ function App() {
       return;
     }
 
+    // Se tutto è valido, resetta l'errore e logga i dati
     setError('');
     console.log('Form submitted:', { name, username, password, sector, expNum, bio });
   }
